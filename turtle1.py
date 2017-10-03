@@ -11,7 +11,6 @@ def initialise():
 
 #create functions here to draw lines and then functions to call these for the various numbers in your barcode.
 
-
 pen = initialise()
 
 time.sleep(5)
