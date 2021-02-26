@@ -10,12 +10,12 @@ file = open("test.txt","w") #w or write mode will replace the entire file
 file.write(data)
 file.close()
 
-file = open("test.txt","a") #a or append mode adds to the file.
+file = open("test.txt","a") #a or append mode adds to the 
 file.write(data)
 file.close()
 
 file = open("test.txt","r") #r or read mode reads data from the file.
-filedata = file.read()
+#filedata = file.read()
 a = "1"
 while a != "":
     a = file.readline()
@@ -28,4 +28,10 @@ for line in f2:
     m2.append(line.rstrip("\n"))
 print(m2)
 f2.close()
+
+s = "This,that,something"
+for x in s.split(","):
+    print(x)
+
+
 
