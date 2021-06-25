@@ -18,7 +18,7 @@ class CarPark:
             return 0'''
 
 class Vehicle:
-    num_wheels = 0
+    __num_wheels = 0
     def __init__(self,num_wheels,colour):
         # this is what a constructor looks like in Python
         self.__num_wheels = num_wheels
