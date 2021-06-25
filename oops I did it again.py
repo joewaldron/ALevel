@@ -1,14 +1,14 @@
 class CarPark:
     def __init__(self, num_spaces):
-        self.customers = [] # this will be an array of type Vehicle - containment
-        self.num_spaces = num_spaces
+        self.__customers = [] # this will be an array of type Vehicle - containment
+        self.__num_spaces = num_spaces
     def parkCustomer(self,veh):  #veh is of type Vehicle
-        if self.num_spaces > 0:
-            self.customers.append(veh)
+        if self.__num_spaces > 0:
+            self.__customers.append(veh)
         else:
             print("No spaces, go away")
     def leave(self,veh):
-            for i in self.customers:  # i represents each vehicle object in the list
+            for i in self.__customers:  # i represents each vehicle object in the list
                 print(i.getColour())
             '''print("Please pay 300 bob.")
             self.customers.pop()
@@ -21,14 +21,14 @@ class Vehicle:
     num_wheels = 0
     def __init__(self,num_wheels,colour):
         # this is what a constructor looks like in Python
-        self.num_wheels = num_wheels
-        self.colour = colour
+        self.__num_wheels = num_wheels
+        self.__colour = colour
     def changeColour(self,col):
-        self.colour = col
+        self.__colour = col
     def getColour(self):
-        return self.colour
+        return self.__colour
     def __str__(self):  # this defines what to do when you print() an instance of this class
-        return "I am a vehicle with a lovely " + self.colour + " colour and " + str(self.num_wheels) + " wheels."
+        return "I am a vehicle with a lovely " + self.__colour + " colour and " + str(self.__num_wheels) + " wheels."
 
 class Car(Vehicle):  # inherits from superclass Vehicle
     def __init__(self,num_wheels,colour):
